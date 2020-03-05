@@ -1,0 +1,15 @@
+- hosts: all
+
+  vars:
+    pip_install_packages:
+      - name: docker
+
+  roles:
+    - manala.influxdb
+
+  become: true
+
+  tasks:
+    - name: Hello Message
+      debug:
+        msg: "Hello World!"
