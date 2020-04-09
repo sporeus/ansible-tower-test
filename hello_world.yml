@@ -5,7 +5,7 @@
       - name: docker
 
   roles:
-    - manala.influxdb
+    - podman
 
   become: true
 

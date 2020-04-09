@@ -30,3 +30,4 @@
 - src: geerlingguy.supervisor/
 - src: manala.influxdb/
 - src: rossmcdonald.influxdb/
+- src: podman
