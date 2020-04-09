@@ -5,8 +5,8 @@
       - name: docker
     timezone: America/New_York
 
-  roles:
-    - yatesr.timezone
+  roles: {{ my_roles }}
+    
 
   become: true
 
