@@ -3,9 +3,10 @@
   vars:
     pip_install_packages:
       - name: docker
+    timezone: America/New_York
 
   roles:
-    - chasinglogic.podman
+    - yatesr.timezone
 
   become: true
 
