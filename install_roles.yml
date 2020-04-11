@@ -6,7 +6,7 @@
     timezone: America/New_York
 
   roles:
-    - : arillso.motd
+    - { role: arillso.motd, tags: ['motd'] }
     - { role: ericsysmin.gcloud, tags: ['gcloud'] }
     - { role: geerlingguy.adminer, tags: ['adminer'] }
     - { role: geerlingguy.ansible, tags: ['ansible'] }
