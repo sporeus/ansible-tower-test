@@ -1,0 +1,49 @@
+- hosts: all
+
+  vars:
+    pip_install_packages:
+      - name: docker
+    timezone: America/New_York
+
+  roles:
+    - : arillso.motd
+    - { role: ericsysmin.gcloud, tags: ['gcloud'] }
+    - { role: geerlingguy.adminer, tags: ['adminer'] }
+    - { role: geerlingguy.ansible, tags: ['ansible'] }
+    - { role: geerlingguy.awx, tags: ['awx'] }
+    - { role: geerlingguy.backup, tags: ['backup'] }
+    - { role: geerlingguy.certbot, tags: ['certbot'] }
+    - { role: geerlingguy.docker, tags: ['docker'] }
+    - { role: geerlingguy.git, tags: ['git'] }
+    - { role: geerlingguy.glusterfs, tags: ['glusterfs'] }
+    - { role: geerlingguy.haproxy, tags: ['haproxy'] }
+    - { role: geerlingguy.java, tags: ['java'] }
+    - { role: geerlingguy.jenkins, tags: ['jenkins'] }
+    - { role: geerlingguy.nfs, tags: ['nfs'] }
+    - { role: geerlingguy.nginx, tags: ['nginx'] }
+    - { role: geerlingguy.nodejs, tags: ['nodejs'] }
+    - { role: geerlingguy.ntp, tags: ['ntp'] }
+    - { role: geerlingguy.packer, tags: ['packer'] }
+    - { role: geerlingguy.php, tags: ['php'] }
+    - { role: geerlingguy.php-mysql, tags: ['php-mysql'] }
+    - { role: geerlingguy.pip, tags: ['pip'] }
+    - { role: geerlingguy.postfix, tags: ['postfix'] }
+    - { role: geerlingguy.postgresql, tags: ['postgresql'] }
+    - { role: geerlingguy.puppet, tags: ['puppet'] }
+    - { role: geerlingguy.rabbitmq, tags: ['rabbitmq'] }
+    - { role: geerlingguy.redis, tags: ['redis'] }
+    - { role: geerlingguy.repo-epel, tags: ['repo-epel'] }
+    - { role: geerlingguy.repo-remi, tags: ['repo-remi'] }
+    - { role: geerlingguy.ruby, tags: ['ruby'] }
+    - { role: geerlingguy.supervisor, tags: ['supervisor'] }
+    - { role: manala.influxdb, tags: ['manala.influxdb'] }
+    - { role: rossmcdonald.influxdb, tags: ['rossmcdonald.influxdb'] }
+    - { role: chasinglogic.podman, tags: ['podman'] }
+    - { role: yatesr.timezone, tags: ['timezone'] }
+
+  become: true
+
+  tasks:
+    - name: Hello Message
+      debug:
+        msg: "Hello World!"
